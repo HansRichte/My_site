@@ -1,0 +1,100 @@
+/* Общие стили */
+
+body {
+    background: #1a1a1a;
+    width: 100%; /* Поправлено */
+    min-height: 100vh; /* Добавлено */
+    display: flex;
+    justify-content: space-around;
+    margin: 0; /* Убрано отступы по умолчанию */
+    font-family: Arial, sans-serif; /* Шрифт по умолчанию */
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 16% 84%;
+    grid-template-rows: auto 1fr;
+    grid-gap: 0;
+    min-height: 100vh;
+}
+
+aside {
+    background: #1a1a1a;
+    padding: 2.5%;
+    color: #fff;
+    overflow: hidden;
+}
+
+.aside_menu{
+    position: fixed;
+
+}
+
+aside img {
+
+    width: 80px;
+    float: left;
+    padding:10px;
+}
+
+aside .logo {
+
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+
+}
+
+aside h3 {
+
+    margin-top: 80px;
+    font-size: 28px;
+    margin-bottom: 80px;
+}
+
+aside ul {list-style: none}
+aside ul li {
+
+    color: #fff;
+    display: block;
+    margin-top: 40px;
+    transition: transform .6s ease;
+    text-decoration: none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #004A4F;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+aside a {
+    text-decoration: none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #4d4d4d;
+}
+
+footer {
+    display: flex;
+    height: 40px;
+    background: #1a1a1a;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2 / 2 ;
+    grid-row: 2 / 3;
+    text-align: center;
+    border-left: 5px solid #4d4d4d;
+}

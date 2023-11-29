@@ -1,0 +1,59 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Главное{% endblock %}
+{% block additional_styles  %} <link rel="stylesheet" href="{% static 'main/css/kino.css' %}"> {% endblock %}
+{% block content %}
+<section>
+    {% for el in film_info %}
+    <div class="posters" style="background-image: url('{% static 'main/image/fon2.png' %}');">
+		 <div class="scroll_posts">
+            <div class="photo">
+                <h2 style="margin-left: 10px;">{{ el.name }}</h2>
+                <div class="jpg"><img src="{{ el.image_film.url }}" alt="{{ el.name }}"></div>
+                <button>Оформить подписку</button>
+            </div>
+             <div  class="Info">
+                <div class="settings_info">
+                    <div class="category">Год:</div>
+                    <div class="value">{{ el.age }}</div>
+
+                    <div class="category">Жанр:</div>
+                    <div class="value">{{ el.genre }}</div>
+
+                    <div class="category">Страна:</div>
+                    <div class="value"> {{ el.country }} </div>
+
+                    <div class="category">Режиссёр:</div>
+                    <div class="value">{{ el.director }}</div>
+
+                    <div class="category">В ролях:</div>
+                    <div class="value">{{ el.cast }}</div>
+                </div>
+                <div class="info">
+                    <p>{{ el.description }}</p>
+                </div>
+             </div>
+		 </div>
+    </div>
+    <section class="show_trailer">
+        <div class="see" style="background-image: url('{% static 'main/image/fon2.png' %}');">
+                <h2>Трейлер</h2>
+                <video width="100%" controls>
+                    <source src="{% static 'main/vidios/StarTrekDiscovery.mp4' %}" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+        </div>
+    </section>
+
+    <section class="show_player">
+        <div class="see" style="background-image: url('{% static 'main/image/fon2.png' %}');">
+                <h2>Просмотр</h2>
+                <video width="100%" controls>
+                    <source src="{% static 'main/vidios/StarTrekDiscovery.mp4' %}" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+        </div>
+    </section>
+    {% endfor %}
+</section>
+{% endblock %}

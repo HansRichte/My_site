@@ -13,11 +13,12 @@
                     <img class="film" src="{% static 'main/image/film_1.jpg' %}">
                     <p class="film-title">Неуязвимый</p>
                 </div>
+                <a href="{% url 'film_detail' 2 %}">
                 <div class="post">
-                 <a href="{% url 'film_detail' 2 %}">
+
                      <img class="film" src="{% static 'main/image/startrek.png' %}">                    <p class="film-title">Star-Trek</p>
-                 </a>
                 </div>
+                </a>
 
                 <div class="post">
                     <img class="film" src="{% static 'main/image/barbi.jpg' %}">

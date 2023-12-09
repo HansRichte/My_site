@@ -11,9 +11,8 @@ class Artiles(models.Model):
     director = models.CharField("Режисер", max_length=20)
     cast = models.CharField("В ролях", max_length=90)
     description = models.TextField("Описание", max_length=537)
-    trailer = models.FileField("Видеофайл", upload_to='videos/')
+    trailer = models.FileField("Трейлер", upload_to='videos/')
     video_file = models.FileField("Видеофайл", upload_to='videos/')
 
-
-def __str__(self):
-    return {self.title}
+    def __str__(self):
+        return self.title

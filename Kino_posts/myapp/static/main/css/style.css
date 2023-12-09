@@ -2,12 +2,6 @@
 
 body {
     background: #1a1a1a;
-    width: 100%; /* Поправлено */
-    min-height: 100vh; /* Добавлено */
-    display: flex;
-    justify-content: space-around;
-    margin: 0; /* Убрано отступы по умолчанию */
-    font-family: Arial, sans-serif; /* Шрифт по умолчанию */
 }
 
 .wrapper {

@@ -14,4 +14,4 @@ def about(request):
 
 def film_detail(request, film_id):
     film = get_object_or_404(Artiles, pk=film_id)
-    return render(request, 'main/Film_info.html', {'el': film})  # Передаем объект фильма под именем 'el'
+    return render(request, 'main/Film_info.html', {'el': film})

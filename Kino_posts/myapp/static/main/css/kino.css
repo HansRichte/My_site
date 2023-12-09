@@ -18,31 +18,30 @@
 
 .photo {
     display: grid;
-    grid-template-rows: 10% 60% 20%;
+    grid-template-rows: 15% 60% 25%;
     gap: 20px;
     justify-content: center;
     justify-items: stretch;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    padding:25px;
+    height: 80%;
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box; /* Добавлено */
+    overflow: hidden;
 }
 
 
-
-.image_film {
-    width: 100%; /* Установите ширину на 100%, чтобы занять всю доступную ширину блока */
-    height: 60%; /* Автоматическая высота для сохранения пропорций */
-
-}
-
-.jpg img{
-    background:red;
+.jpg {
+    /* Удалите заданные значения width и height */
     justify-items: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height:auto;
+}
+
+.jpg img {
+    /* Удалите заданные значения width и height */
+    max-width: 100%; /* Чтобы изображение подстраивалось по размеру родителя */
+    height: auto;
     margin-bottom: 20px;
 }
 

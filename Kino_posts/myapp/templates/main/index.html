@@ -1,9 +1,9 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 {% block title %}Главное{% endblock %}
-{% block style %} <link rel="stylesheet" href="{% static 'main/css/poster.css' %}"> {% endblock %}
+{% block additional_styles %} <link rel="stylesheet" href="{% static 'main/css/poster.css' %}"> {% endblock %}
 {% block content %}
-<section style="margin:10px">
+
     <div class="posters" style="background-image: url('{% static 'main/image/fon.png' %}');">
         <h2 class="level_name">Новые серии</h2>
         <div class="scroll_posts">
@@ -14,9 +14,11 @@
                     <p class="film-title">Неуязвимый</p>
                 </div>
                 <div class="post">
-                    <img class="film" src="{% static 'main/image/startrek.png' %}">
-                    <p class="film-title">Star-Trek</p>
+                 <a href="{% url 'film_detail' 2 %}">
+                     <img class="film" src="{% static 'main/image/startrek.png' %}">                    <p class="film-title">Star-Trek</p>
+                 </a>
                 </div>
+
                 <div class="post">
                     <img class="film" src="{% static 'main/image/barbi.jpg' %}">
                     <p class="film-title">Barbi</p>
@@ -44,6 +46,6 @@
             <button class=" btn"><i class="fa-solid fa-arrow-right" style="color: #fcfcfc;"></i></button>
         </div>
     </div>
-</section>
+
 
 {% endblock %}

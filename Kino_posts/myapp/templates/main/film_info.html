@@ -1,15 +1,15 @@
 {% extends 'main/layout.html' %}
 {% load static %}
-{% block title %}Главное{% endblock %}
+{% block title %}парв{% endblock %}
 {% block additional_styles  %} <link rel="stylesheet" href="{% static 'main/css/kino.css' %}"> {% endblock %}
+
 {% block content %}
 <section>
-    {% for el in film_info %}
     <div class="posters" style="background-image: url('{% static 'main/image/fon2.png' %}');">
 		 <div class="scroll_posts">
             <div class="photo">
                 <h2 style="margin-left: 10px;">{{ el.name }}</h2>
-                <div class="jpg"><img src="{{ el.image_film.url }}" alt="{{ el.name }}"></div>
+                <div class="jpg"><img = {{ el.image_film }}></div>
                 <button>Оформить подписку</button>
             </div>
              <div  class="Info">
@@ -35,6 +35,7 @@
              </div>
 		 </div>
     </div>
+</section>
     <section class="show_trailer">
         <div class="see" style="background-image: url('{% static 'main/image/fon2.png' %}');">
                 <h2>Трейлер</h2>
@@ -54,6 +55,5 @@
                 </video>
         </div>
     </section>
-    {% endfor %}
-</section>
+
 {% endblock %}

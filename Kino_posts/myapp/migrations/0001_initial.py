@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=20, verbose_name='Название страницы')),
                 ('name', models.CharField(max_length=20, verbose_name='Название (фильма / сериала)')),
-                ('image_film', models.ImageField(upload_to='static/main/image', verbose_name='Изображение обложки фильма')),
+                ('image_film', models.ImageField(upload_to='static/main/image', verbose_name='Изображение_обложки')),
                 ('age', models.DateField(verbose_name='Дата выпуска')),
                 ('genre', models.CharField(max_length=20, verbose_name='Жанр')),
                 ('country', models.CharField(max_length=20, verbose_name='Страна')),

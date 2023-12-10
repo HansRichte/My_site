@@ -3,46 +3,67 @@
 {% block title %}Главное{% endblock %}
 {% block additional_styles %} <link rel="stylesheet" href="{% static 'main/css/poster.css' %}"> {% endblock %}
 {% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 
     <div class="posters" style="background-image: url('{% static 'main/image/fon.png' %}');">
         <h2 class="level_name">Новые серии</h2>
         <div class="scroll_posts">
             <button class=" btn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
             <div class="posts">
-                <div class="post">
-                    <img class="film" src="{% static 'main/image/film_1.jpg' %}">
-                    <p class="film-title">Неуязвимый</p>
-                </div>
+
                 <a href="{% url 'film_detail' 2 %}">
                 <div class="post">
-
-                     <img class="film" src="{% static 'main/image/startrek.png' %}">                    <p class="film-title">Star-Trek</p>
+                    <img class="film" src="{% static 'main/image/barbi.jpg' %}">
+                    <p class="film-title">Неуязвимый</p>
                 </div>
                 </a>
 
+
+                <a href="{% url 'film_detail' 2 %}">
+                <div class="post">
+                     <img class="film" src="{% static 'main/image/startrek.png' %}">
+                     <p class="film-title">Star-Trek</p>
+                </div>
+                </a>
+
+
+                <a href="{% url 'film_detail' 2 %}">
                 <div class="post">
                     <img class="film" src="{% static 'main/image/barbi.jpg' %}">
                     <p class="film-title">Barbi</p>
                 </div>
+                </a>
+
             </div>
             <button class=" btn"><i class="fa-solid fa-arrow-right" style="color: #fcfcfc;"></i></button>
         </div>
+
         <h2 class="level_name">Премьера</h2>
         <div class="scroll_posts">
             <button class=" btn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
             <div class="posts">
+
+                <a href="{% url 'film_detail' 2 %}">
                 <div class="post">
-                    <img class="film" src="{% static 'main/image/film_1.jpg' %}">
+                    <img class="film" src="{% static 'main/image/barbi.jpg' %}">
                     <p class="film-title">Неуязвимый</p>
                 </div>
+                </a>
+
+                <a href="{% url 'film_detail' 2 %}">
                 <div class="post">
                     <img class="film" src="{% static 'main/image/startrek.png' %}">
                     <p class="film-title">Star-Trek</p>
                 </div>
+                </a>
+
+                <a href="{% url 'film_detail' 2 %}">
                 <div class="post">
                     <img class="film" src="{% static 'main/image/barbi.jpg' %}">
                     <p class="film-title">Barbi</p>
                 </div>
+                </a>
+
             </div>
             <button class=" btn"><i class="fa-solid fa-arrow-right" style="color: #fcfcfc;"></i></button>
         </div>
